@@ -15,6 +15,8 @@ import {
 import FacebookIcon from 'src/icons/Facebook';
 import GoogleIcon from 'src/icons/Google';
 import Page from 'src/components/Page';
+import { useDispatch } from 'react-redux';
+import { AuthActions } from 'src/redux/Auth';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,9 +27,11 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
+
 const LoginView = () => {
   const classes = useStyles();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   return (
     <Page
@@ -43,16 +47,24 @@ const LoginView = () => {
         <Container maxWidth="sm">
           <Formik
             initialValues={{
-              email: 'demo@devias.io',
-              password: 'Password123'
+              email: 'kimhoan123@gmail.com',
+              password: 'kimhoan'
             }}
             validationSchema={Yup.object().shape({
               email: Yup.string().email('Must be a valid email').max(255).required('Email is required'),
               password: Yup.string().max(255).required('Password is required')
             })}
-            onSubmit={() => {
-              navigate('/app/dashboard', { replace: true });
-            }}
+            onSubmit={
+              async (data) => {
+                try {
+                  await dispatch(AuthActions.authLogin(data.email, data.password));
+                  navigate('/app/customers');
+                }
+                catch (err) {
+                  console.log(err)
+                }
+              }
+            }
           >
             {({
               errors,
@@ -158,9 +170,10 @@ const LoginView = () => {
                     color="primary"
                     disabled={isSubmitting}
                     fullWidth
-                    size="large"
+                    //size="large"
                     type="submit"
                     variant="contained"
+                    onClick={handleSubmit}
                   >
                     Sign in now
                   </Button>

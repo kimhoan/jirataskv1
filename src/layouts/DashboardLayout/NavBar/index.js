@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import {
   Avatar,
   Box,
-  Button,
   Divider,
   Drawer,
   Hidden,
@@ -25,36 +24,36 @@ import {
 import NavItem from './NavItem';
 
 const user = {
-  avatar: '/static/images/avatars/avatar_6.png',
-  jobTitle: 'Senior Developer',
-  name: 'Katarina Smith'
+  avatar: '/static/images/avatars/avatar_7.png',
+  jobTitle: 'Nhân viên triển khai',
+  name: 'Kim Hoàn'
 };
 
 const items = [
   {
-    href: '/app/dashboard',
+    href: '/app/solieuthongke',
     icon: BarChartIcon,
-    title: 'Dashboard'
+    title: 'Số liệu thống kê'
   },
   {
     href: '/app/customers',
     icon: UsersIcon,
-    title: 'Customers'
+    title: 'Thành viên'
   },
   {
     href: '/app/products',
     icon: ShoppingBagIcon,
-    title: 'Products'
+    title: 'Dự án đang triển khai'
   },
   {
     href: '/app/account',
     icon: UserIcon,
-    title: 'Account'
+    title: 'Tài khoản'
   },
   {
     href: '/app/settings',
     icon: SettingsIcon,
-    title: 'Settings'
+    title: 'Cài đặt'
   },
   {
     href: '/login',
@@ -64,12 +63,23 @@ const items = [
   {
     href: '/register',
     icon: UserPlusIcon,
-    title: 'Register'
+    title: 'Đăng kí'
   },
+  // {
+  //   href: 'http://10.52.50.170:6969/tasks',
+  //   target: 'blank',
+  //   icon: BarChartIcon,
+  //   title: 'Calendar'
+  // },
   {
     href: '/404',
     icon: AlertCircleIcon,
     title: 'Error'
+  },
+  {
+    href: '/app/manager',
+    icon: AlertCircleIcon,
+    title: 'Project manager'
   }
 ];
 
@@ -97,7 +107,6 @@ const NavBar = ({ onMobileClose, openMobile }) => {
     if (openMobile && onMobileClose) {
       onMobileClose();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.pathname]);
 
   const content = (
@@ -144,6 +153,7 @@ const NavBar = ({ onMobileClose, openMobile }) => {
             />
           ))}
         </List>
+        {/* <Button color="text" href="http://10.52.50.170:6969" target="blank">Calendar</Button> */}
       </Box>
       <Box flexGrow={1} />
       <Box
@@ -151,20 +161,20 @@ const NavBar = ({ onMobileClose, openMobile }) => {
         m={2}
         bgcolor="background.dark"
       >
-        <Typography
+        {/* <Typography
           align="center"
           gutterBottom
           variant="h4"
         >
           Need more?
-        </Typography>
-        <Typography
+        </Typography> */}
+        {/* <Typography
           align="center"
           variant="body2"
         >
           Upgrade to PRO version and access 20 more screens
-        </Typography>
-        <Box
+        </Typography> */}
+        {/* <Box
           display="flex"
           justifyContent="center"
           mt={2}
@@ -177,7 +187,7 @@ const NavBar = ({ onMobileClose, openMobile }) => {
           >
             See PRO version
           </Button>
-        </Box>
+        </Box> */}
       </Box>
     </Box>
   );
@@ -215,7 +225,7 @@ NavBar.propTypes = {
 };
 
 NavBar.defaultProps = {
-  onMobileClose: () => {},
+  onMobileClose: () => { },
   openMobile: false
 };
 

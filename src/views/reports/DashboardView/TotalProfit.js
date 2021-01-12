@@ -43,13 +43,14 @@ const TotalProfit = ({ className, ...rest }) => {
               gutterBottom
               variant="h6"
             >
-              TOTAL PROFIT
+              {/* TOTAL PROFIT */}
+              TỔNG THU KINH DOANH
             </Typography>
             <Typography
               color="textPrimary"
               variant="h3"
             >
-              $23,200
+              23 (TỶ VND)
             </Typography>
           </Grid>
           <Grid item>

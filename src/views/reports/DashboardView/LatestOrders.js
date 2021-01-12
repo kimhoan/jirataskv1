@@ -28,7 +28,7 @@ const data = [
     ref: 'CDD1049',
     amount: 30.5,
     customer: {
-      name: 'Ekaterina Tankova'
+      name: 'Nguyễn Kim Hoàn'
     },
     createdAt: 1555016400000,
     status: 'pending'
@@ -38,7 +38,7 @@ const data = [
     ref: 'CDD1048',
     amount: 25.1,
     customer: {
-      name: 'Cao Yu'
+      name: 'Đỗ Đức Kha'
     },
     createdAt: 1555016400000,
     status: 'delivered'
@@ -48,7 +48,7 @@ const data = [
     ref: 'CDD1047',
     amount: 10.99,
     customer: {
-      name: 'Alexa Richardson'
+      name: 'Lê Nhiên'
     },
     createdAt: 1554930000000,
     status: 'refunded'
@@ -58,7 +58,7 @@ const data = [
     ref: 'CDD1046',
     amount: 96.43,
     customer: {
-      name: 'Anje Keizer'
+      name: 'Nguyễn Khánh Nghĩa'
     },
     createdAt: 1554757200000,
     status: 'pending'
@@ -68,7 +68,7 @@ const data = [
     ref: 'CDD1045',
     amount: 32.54,
     customer: {
-      name: 'Clarke Gillebert'
+      name: 'Phạm Trần Vũ'
     },
     createdAt: 1554670800000,
     status: 'delivered'
@@ -78,7 +78,7 @@ const data = [
     ref: 'CDD1044',
     amount: 16.76,
     customer: {
-      name: 'Adam Denisov'
+      name: 'Nguyễn Ngọc Thảo'
     },
     createdAt: 1554670800000,
     status: 'delivered'
@@ -101,7 +101,8 @@ const LatestOrders = ({ className, ...rest }) => {
       className={clsx(classes.root, className)}
       {...rest}
     >
-      <CardHeader title="Latest Orders" />
+      <CardHeader title="Trạng thái dự án" />
+      {/* <CardHeader title="Latest Orders" /> */}
       <Divider />
       <PerfectScrollbar>
         <Box minWidth={800}>
@@ -109,10 +110,10 @@ const LatestOrders = ({ className, ...rest }) => {
             <TableHead>
               <TableRow>
                 <TableCell>
-                  Order Ref
+                  Mã Dự Án
                 </TableCell>
                 <TableCell>
-                  Customer
+                  Thành viên
                 </TableCell>
                 <TableCell sortDirection="desc">
                   <Tooltip
@@ -123,12 +124,12 @@ const LatestOrders = ({ className, ...rest }) => {
                       active
                       direction="desc"
                     >
-                      Date
+                      Ngày
                     </TableSortLabel>
                   </Tooltip>
                 </TableCell>
                 <TableCell>
-                  Status
+                  Trạng thái
                 </TableCell>
               </TableRow>
             </TableHead>

@@ -33,8 +33,8 @@ const Notifications = ({ className, ...rest }) => {
     >
       <Card>
         <CardHeader
-          subheader="Manage the notifications"
-          title="Notifications"
+          subheader="Quản lý thông báo"
+          title="Thông báo"
         />
         <Divider />
         <CardContent>
@@ -109,6 +109,12 @@ const Notifications = ({ className, ...rest }) => {
                   <Checkbox defaultChecked />
                 )}
                 label="Phone calls"
+              />
+              <FormControlLabel
+                control={(
+                  <Checkbox />
+                )}
+                label="Telegram"
               />
             </Grid>
           </Grid>

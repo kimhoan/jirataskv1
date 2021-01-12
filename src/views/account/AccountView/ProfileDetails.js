@@ -15,16 +15,16 @@ import {
 
 const states = [
   {
-    value: 'alabama',
-    label: 'Alabama'
+    value: 'quangngai',
+    label: 'Quảng Ngãi'
   },
   {
-    value: 'new-york',
-    label: 'New York'
+    value: 'hcm',
+    label: 'Tp HCM'
   },
   {
-    value: 'san-francisco',
-    label: 'San Francisco'
+    value: 'hanoi',
+    label: 'Tp Hà Nội'
   }
 ];
 
@@ -35,12 +35,12 @@ const useStyles = makeStyles(() => ({
 const ProfileDetails = ({ className, ...rest }) => {
   const classes = useStyles();
   const [values, setValues] = useState({
-    firstName: 'Katarina',
-    lastName: 'Smith',
-    email: 'demo@devias.io',
-    phone: '',
-    state: 'Alabama',
-    country: 'USA'
+    firstName: 'Hoàn',
+    lastName: 'Nguyễn Kim',
+    email: 'hoan.nguyenkim94@gmail.com',
+    phone: '0943087654',
+    state: 'Quảng Ngãi',
+    country: 'Việt Nam'
   });
 
   const handleChange = (event) => {
@@ -59,8 +59,8 @@ const ProfileDetails = ({ className, ...rest }) => {
     >
       <Card>
         <CardHeader
-          subheader="The information can be edited"
-          title="Profile"
+          subheader="Thông tin chi tiết có thể chỉnh sửa"
+          title="Thông tin cá nhân"
         />
         <Divider />
         <CardContent>

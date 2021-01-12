@@ -52,13 +52,14 @@ const TotalCustomers = ({ className, ...rest }) => {
               gutterBottom
               variant="h6"
             >
-              TOTAL CUSTOMERS
+              {/* TOTAL CUSTOMERS */}
+              TỔNG THÀNH VIÊN
             </Typography>
             <Typography
               color="textPrimary"
               variant="h3"
             >
-              1,600
+              16
             </Typography>
           </Grid>
           <Grid item>
@@ -83,7 +84,7 @@ const TotalCustomers = ({ className, ...rest }) => {
             color="textSecondary"
             variant="caption"
           >
-            Since last month
+            4 tháng trước
           </Typography>
         </Box>
       </CardContent>

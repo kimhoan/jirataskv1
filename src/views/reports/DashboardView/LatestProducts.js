@@ -22,32 +22,32 @@ import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 const data = [
   {
     id: uuid(),
-    name: 'Dropbox',
-    imageUrl: '/static/images/products/product_1.png',
+    name: 'HIS',
+    imageUrl: '/static/images/products/product_7.jpeg',
     updatedAt: moment().subtract(2, 'hours')
   },
   {
     id: uuid(),
-    name: 'Medium Corporation',
-    imageUrl: '/static/images/products/product_2.png',
+    name: 'iOffice',
+    imageUrl: '/static/images/products/product_7.jpeg',
     updatedAt: moment().subtract(2, 'hours')
   },
   {
     id: uuid(),
-    name: 'Slack',
-    imageUrl: '/static/images/products/product_3.png',
+    name: 'VNPT Task',
+    imageUrl: '/static/images/products/product_7.jpeg',
     updatedAt: moment().subtract(3, 'hours')
   },
   {
     id: uuid(),
-    name: 'Lyft',
-    imageUrl: '/static/images/products/product_4.png',
+    name: 'VNPT YTCS',
+    imageUrl: '/static/images/products/product_7.jpeg',
     updatedAt: moment().subtract(5, 'hours')
   },
   {
     id: uuid(),
-    name: 'GitHub',
-    imageUrl: '/static/images/products/product_5.png',
+    name: 'eOffice',
+    imageUrl: '/static/images/products/product_7.jpeg',
     updatedAt: moment().subtract(9, 'hours')
   }
 ];
@@ -73,7 +73,8 @@ const LatestProducts = ({ className, ...rest }) => {
     >
       <CardHeader
         subtitle={`${products.length} in total`}
-        title="Latest Products"
+        // title="Latest Products"
+        title="Dự án"
       />
       <Divider />
       <List>

@@ -107,10 +107,11 @@ const Sales = ({ className, ...rest }) => {
             size="small"
             variant="text"
           >
-            Last 7 days
+            7 ngày qua
           </Button>
         )}
-        title="Latest Sales"
+        // title="Latest Sales"
+        title="Biểu đồ thống kê"
       />
       <Divider />
       <CardContent>
@@ -136,7 +137,7 @@ const Sales = ({ className, ...rest }) => {
           size="small"
           variant="text"
         >
-          Overview
+          Xem thêm
         </Button>
       </Box>
     </Card>

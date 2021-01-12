@@ -45,7 +45,8 @@ const TasksProgress = ({ className, ...rest }) => {
               gutterBottom
               variant="h6"
             >
-              TASKS PROGRESS
+              {/* TASKS PROGRESS */}
+              % HOÀN THÀNH
             </Typography>
             <Typography
               color="textPrimary"

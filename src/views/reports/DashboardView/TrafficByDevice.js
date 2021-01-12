@@ -92,7 +92,8 @@ const TrafficByDevice = ({ className, ...rest }) => {
       className={clsx(classes.root, className)}
       {...rest}
     >
-      <CardHeader title="Traffic by Device" />
+      {/* <CardHeader title="Traffic by Device" /> */}
+      <CardHeader title="Thiết bị đăng nhập" />
       <Divider />
       <CardContent>
         <Box
@@ -115,27 +116,27 @@ const TrafficByDevice = ({ className, ...rest }) => {
             title,
             value
           }) => (
-            <Box
-              key={title}
-              p={1}
-              textAlign="center"
-            >
-              <Icon color="action" />
-              <Typography
-                color="textPrimary"
-                variant="body1"
+              <Box
+                key={title}
+                p={1}
+                textAlign="center"
               >
-                {title}
-              </Typography>
-              <Typography
-                style={{ color }}
-                variant="h2"
-              >
-                {value}
+                <Icon color="action" />
+                <Typography
+                  color="textPrimary"
+                  variant="body1"
+                >
+                  {title}
+                </Typography>
+                <Typography
+                  style={{ color }}
+                  variant="h2"
+                >
+                  {value}
                 %
               </Typography>
-            </Box>
-          ))}
+              </Box>
+            ))}
         </Box>
       </CardContent>
     </Card>

@@ -36,16 +36,16 @@ const Toolbar = ({ className, ...rest }) => {
         justifyContent="flex-end"
       >
         <Button className={classes.importButton}>
-          Import
+          THÊM TV DỰ ÁN
         </Button>
         <Button className={classes.exportButton}>
-          Export
+          XOÁ TV DỰ ÁN
         </Button>
         <Button
           color="primary"
           variant="contained"
         >
-          Add product
+          ADD DỰ ÁN
         </Button>
       </Box>
       <Box mt={3}>

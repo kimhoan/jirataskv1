@@ -106,7 +106,7 @@ const Results = ({ className, customers, ...rest }) => {
                   Phone
                 </TableCell>
                 <TableCell>
-                  Registration date
+                  Ngày đăng kí
                 </TableCell>
               </TableRow>
             </TableHead>
